@@ -1,9 +1,11 @@
 # NumberArguments v 1.0.1
+This an AddOn for the [ConfigCommands](https://github.com/willkroboth/ConfigCommands) plugin. It adds arguments and functions related to numbers. To learn more about ConfigCommand AddOns, see [this file](https://github.com/willkroboth/ConfigCommands/blob/main/AddOns.md).
+
 ## Spigot api-version: 1.18
 ## Dependencies
 [CommandAPI](https://commandapi.jorel.dev/) v 7.0.0 by [JorelAli](https://github.com/JorelAli) ([download](https://github.com/JorelAli/CommandAPI/releases/download/7.0.0/CommandAPI-7.0.0.jar))
 
-[ConfigCommands](/ConfigCommands.jar) v 1.0.1
+[ConfigCommands](https://github.com/willkroboth/ConfigCommands/blob/main/ConfigCommands.jar) v 1.0.1
 
 For server owners: Make sure to put both the CommandAPI.jar and ConfigCommand.jar files in your plugins folder.
 
@@ -171,7 +173,7 @@ Description: Creates a new number. If no arguments are given, the default value 
 
 ## Function Adders
 ### [IntegerFunctionAdder](./src/me/willkroboth/NumberArguments/InternalArguments/IntegerFunctionAdder.java)
-#### Class to add to: [InternalIntegerArgument](/Plugin%20Description.md#internalintegerargument)
+#### Class to add to: [InternalIntegerArgument](https://github.com/willkroboth/ConfigCommands/blob/main/Plugin%20Description.md#internalintegerargument)
 #### Added functions:
 [NumberFunctions](#numberfunctions)
 
