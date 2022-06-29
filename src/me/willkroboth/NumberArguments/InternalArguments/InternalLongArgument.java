@@ -3,7 +3,7 @@ package me.willkroboth.NumberArguments.InternalArguments;
 import dev.jorel.commandapi.CommandAPICommand;
 import dev.jorel.commandapi.arguments.LongArgument;
 import me.willkroboth.ConfigCommands.Exceptions.CommandRunException;
-import me.willkroboth.ConfigCommands.Exceptions.RegistrationExceptions.IncorrectArgumentKey;
+import me.willkroboth.ConfigCommands.Exceptions.IncorrectArgumentKey;
 import me.willkroboth.ConfigCommands.Functions.NonGenericVarargs.FunctionList;
 import me.willkroboth.ConfigCommands.Functions.NonGenericVarargs.StaticFunctionList;
 import me.willkroboth.ConfigCommands.HelperClasses.IndentedLogger;
