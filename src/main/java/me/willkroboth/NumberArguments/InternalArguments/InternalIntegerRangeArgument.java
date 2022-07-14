@@ -4,7 +4,6 @@ import dev.jorel.commandapi.CommandAPICommand;
 import dev.jorel.commandapi.arguments.IntegerRangeArgument;
 import dev.jorel.commandapi.wrappers.IntegerRange;
 import me.willkroboth.ConfigCommands.Exceptions.CommandRunException;
-import me.willkroboth.ConfigCommands.Exceptions.RegistrationExceptions.IncorrectArgumentKey;
 import me.willkroboth.ConfigCommands.Functions.Definition;
 import me.willkroboth.ConfigCommands.Functions.Function;
 import me.willkroboth.ConfigCommands.Functions.NonGenericVarargs.FunctionList;
@@ -30,7 +29,7 @@ public class InternalIntegerRangeArgument extends InternalArgument {
         super(value);
     }
 
-    public void addArgument(Map<?, ?> arg, CommandAPICommand command, String name, ArrayList<String> argument_keys, HashMap<String, Class<? extends InternalArgument>> argument_variable_classes, boolean debugMode, IndentedLogger logger) throws IncorrectArgumentKey {
+    public void addArgument(Map<?, ?> arg, CommandAPICommand command, String name, ArrayList<String> argument_keys, HashMap<String, Class<? extends InternalArgument>> argument_variable_classes, boolean debugMode, IndentedLogger logger) {
         command.withArguments(new IntegerRangeArgument(name));
         argument_keys.add(name);
         argument_variable_classes.put(name, InternalIntegerRangeArgument.class);
