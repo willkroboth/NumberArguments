@@ -1,5 +1,5 @@
 ## [NumberArguments v 2.0.0](/Releases/NumberArguments-2.0.0.jar) (current)
-Compatible ConfigCommands version: [2.0.0](https://github.com/willkroboth/ConfigCommands/blob/main/Releases/ConfigCommands-2.0.0.jar)
+Compatible ConfigCommands versions: [2.0.0](https://github.com/willkroboth/ConfigCommands/blob/main/Releases/ConfigCommands-2.0.0.jar)+
 - Updated to minecraft version 1.19
 
 ### Technical Changes
