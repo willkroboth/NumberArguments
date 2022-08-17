@@ -1,11 +1,10 @@
-# NumberArguments v 1.0.1
+# NumberArguments v 2.0.0
 This an AddOn for the [ConfigCommands](https://github.com/willkroboth/ConfigCommands) plugin. It adds arguments and functions related to numbers. To learn more about ConfigCommand AddOns, see [this file](https://github.com/willkroboth/ConfigCommands/blob/main/AddOns.md).
 
-## Spigot api-version: 1.18
 ## Dependencies
 [CommandAPI](https://commandapi.jorel.dev/) v 8.4.1 by [JorelAli](https://github.com/JorelAli) ([download](https://github.com/JorelAli/CommandAPI/releases/download/8.4.1/CommandAPI-8.4.1.jar))
 
-[ConfigCommands](https://github.com/willkroboth/ConfigCommands/blob/main/Releases/ConfigCommands-2.0.0.jar) v 2.0.0
+[ConfigCommands](https://github.com/willkroboth/ConfigCommands/blob/main/Releases/ConfigCommands-2.0.0.jar) v 2.0.0+
 
 For server owners: Make sure to put both the CommandAPI.jar and ConfigCommand.jar files in your plugins folder.
 
