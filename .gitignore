@@ -1,0 +1,7 @@
+# build files
+**/target/
+**/dependency-reduced-pom.xml
+
+# IntelliJ project configuration files
+/.idea/
+**.iml
