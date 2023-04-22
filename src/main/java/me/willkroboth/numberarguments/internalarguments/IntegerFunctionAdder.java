@@ -1,81 +1,101 @@
 package me.willkroboth.numberarguments.internalarguments;
 
-import me.willkroboth.ConfigCommands.Functions.Definition;
-import me.willkroboth.ConfigCommands.Functions.NonGenericVarargs.FunctionList;
-import me.willkroboth.ConfigCommands.Functions.NonGenericVarargs.StaticFunctionList;
-import me.willkroboth.ConfigCommands.Functions.StaticFunction;
-import me.willkroboth.ConfigCommands.InternalArguments.FunctionAdder;
-import me.willkroboth.ConfigCommands.InternalArguments.InternalArgument;
-import me.willkroboth.ConfigCommands.InternalArguments.InternalBooleanArgument;
-import me.willkroboth.ConfigCommands.InternalArguments.InternalIntegerArgument;
+import me.willkroboth.configcommands.functions.InstanceFunctionList;
+import me.willkroboth.configcommands.functions.StaticFunction;
+import me.willkroboth.configcommands.functions.StaticFunctionList;
+import me.willkroboth.configcommands.internalarguments.FunctionAdder;
+import me.willkroboth.configcommands.internalarguments.InternalArgument;
+import me.willkroboth.configcommands.internalarguments.InternalBooleanArgument;
+import me.willkroboth.configcommands.internalarguments.InternalIntegerArgument;
 
 import java.util.List;
 
 public class IntegerFunctionAdder extends FunctionAdder implements NumberFunctions {
-    public Class<? extends InternalArgument> getClassToAddTo() { return InternalIntegerArgument.class; }
+    @Override
+    public Class<? extends InternalArgument> getClassToAddTo() {
+        return InternalIntegerArgument.class;
+    }
 
-    public FunctionList getAddedFunctions() { return generateFunctions(); }
+    @Override
+    public InstanceFunctionList getAddedFunctions() {
+        return generateFunctions();
+    }
 
+    @Override
     public InternalBooleanArgument lessThan(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalBooleanArgument((int) target.getValue() < (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalBooleanArgument lessThanOrEqual(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalBooleanArgument((int) target.getValue() <= (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalBooleanArgument greaterThan(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalBooleanArgument((int) target.getValue() > (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalBooleanArgument greaterThanOrEqual(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalBooleanArgument((int) target.getValue() >= (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalBooleanArgument equalTo(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalBooleanArgument((int) target.getValue() == (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalBooleanArgument notEqualTo(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalBooleanArgument((int) target.getValue() != (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalIntegerArgument add(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalIntegerArgument((int) target.getValue() + (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalIntegerArgument subtract(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalIntegerArgument((int) target.getValue() - (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalIntegerArgument multiply(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalIntegerArgument((int) target.getValue() * (int) arguments.get(0).getValue());
     }
 
+    @Override
     public InternalIntegerArgument divide(InternalArgument target, List<InternalArgument> arguments) {
         return new InternalIntegerArgument((int) target.getValue() / (int) arguments.get(0).getValue());
     }
 
+    @Override
     public StaticFunctionList getAddedStaticFunctions() {
-        return staticMerge(
-                staticEntries(
-                        staticEntry(new Definition("maxValue", args()),
-                                new StaticFunction(this::maxValue, myClass())),
-                        staticEntry(new Definition("minValue", args()),
-                                new StaticFunction(this::minValue, myClass()))
-                )
+        return functions(
+                new StaticFunction("maxValue")
+                        .returns(myClass(), "The maximum value representable by this number")
+                        .executes(this::maxValue),
+                new StaticFunction("minValue")
+                        .returns(myClass(), "The minimum value representable by this number")
+                        .executes(this::minValue)
         );
     }
 
-    public InternalIntegerArgument maxValue(List<InternalArgument> parameters){
+    @Override
+    public InternalIntegerArgument maxValue(List<InternalArgument> parameters) {
         return new InternalIntegerArgument(Integer.MAX_VALUE);
     }
 
-    public InternalIntegerArgument minValue(List<InternalArgument> parameters){
+    @Override
+    public InternalIntegerArgument minValue(List<InternalArgument> parameters) {
         return new InternalIntegerArgument(Integer.MIN_VALUE);
     }
 
+    @Override
     public InternalArgument initialize(List<InternalArgument> parameters) {
-        return new InternalIntegerArgument().initialize(parameters);
+        // This shouldn't be called, since InternalIntegerArgument already has the initialize function in the base plugin
+        throw new UnsupportedOperationException("IntegerFunctionAdder#initialize is not supposed to be used.");
     }
 }
