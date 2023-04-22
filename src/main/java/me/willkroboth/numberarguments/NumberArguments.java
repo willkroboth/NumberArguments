@@ -1,4 +1,4 @@
-package me.willkroboth.NumberArguments;
+package me.willkroboth.numberarguments;
 
 import me.willkroboth.ConfigCommands.HelperClasses.ConfigCommandAddOn;
 

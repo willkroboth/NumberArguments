@@ -20,7 +20,7 @@ For server owners: Make sure to put both the CommandAPI.jar and ConfigCommand.ja
 
 
 ## Function Interfaces
-### [NumberFunctions](./src/main/java/me/willkroboth/NumberArguments/InternalArguments/NumberFunctions.java)
+### [NumberFunctions](./src/main/java/me/willkroboth/numberarguments/internalarguments/NumberFunctions.java)
 #### Known implementing classes:
 - [IntegerFunctionAdder](#integerfunctionadder)
 - [InternalDoubleArgument](#internaldoubleargument)
@@ -171,7 +171,7 @@ Description: Creates a new number. If no arguments are given, the default value 
 
 
 ## Function Adders
-### [IntegerFunctionAdder](./src/main/java/me/willkroboth/NumberArguments/InternalArguments/IntegerFunctionAdder.java)
+### [IntegerFunctionAdder](./src/main/java/me/willkroboth/numberarguments/internalarguments/IntegerFunctionAdder.java)
 #### Class to add to: [InternalIntegerArgument](https://github.com/willkroboth/ConfigCommands/blob/main/Plugin%20Description.md#internalintegerargument)
 #### Added functions:
 [NumberFunctions](#numberfunctions)
@@ -180,7 +180,7 @@ Description: Creates a new number. If no arguments are given, the default value 
 [NumberFunctions](#numberfunctions)
 
 ## Internal Arguments
-### [InternalDoubleArgument](./src/main/java/me/willkroboth/NumberArguments/InternalArguments/InternalDoubleArgument.java)
+### [InternalDoubleArgument](./src/main/java/me/willkroboth/numberarguments/internalarguments/InternalDoubleArgument.java)
 #### Adding to command:
 type: Double
 #### Java Class: [Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)
@@ -199,7 +199,7 @@ Description: Returns a string representation of the target double in decimal
 #### Static Functions:
 [NumberFunctions](#numberfunctions)
 
-### [InternalFloatArgument](./src/main/java/me/willkroboth/NumberArguments/InternalArguments/InternalFloatArgument.java)
+### [InternalFloatArgument](./src/main/java/me/willkroboth/numberarguments/internalarguments/InternalFloatArgument.java)
 #### Adding to command:
 type: Float
 
@@ -223,7 +223,7 @@ Description: Returns a string representation of the target float in decimal.
 #### Static Functions:
 [NumberFunctions](#numberfunctions)
 
-### [InternalFloatRangeArgument](./src/main/java/me/willkroboth/NumberArguments/InternalArguments/InternalFloatRangeArgument.java)
+### [InternalFloatRangeArgument](./src/main/java/me/willkroboth/numberarguments/internalarguments/InternalFloatRangeArgument.java)
 #### Adding to command:
 type: FloatRange
 
@@ -299,7 +299,7 @@ Description: Creates a new FloatRange with the upper bound at the given float an
 
 
 
-### [InternalIntegerRangeArgument](./src/main/java/me/willkroboth/NumberArguments/InternalArguments/InternalIntegerRangeArgument.java)
+### [InternalIntegerRangeArgument](./src/main/java/me/willkroboth/numberarguments/internalarguments/InternalIntegerRangeArgument.java)
 #### Adding to command:
 type: IntegerRange
 
@@ -373,7 +373,7 @@ Result: InternalIntegerRange
 
 Description: Creates a new IntegerRange with the upper bound at the given int and the lower bound at the most negative finite int
 
-### [InternalLongArgument](./src/main/java/me/willkroboth/NumberArguments/InternalArguments/InternalLongArgument.java)
+### [InternalLongArgument](./src/main/java/me/willkroboth/numberarguments/internalarguments/InternalLongArgument.java)
 #### Adding to command:
 type: Long
 #### Java Class: [Long](https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html)

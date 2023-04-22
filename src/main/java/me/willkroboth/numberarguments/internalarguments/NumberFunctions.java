@@ -1,4 +1,4 @@
-package me.willkroboth.NumberArguments.InternalArguments;
+package me.willkroboth.numberarguments.internalarguments;
 
 import me.willkroboth.ConfigCommands.Functions.Definition;
 import me.willkroboth.ConfigCommands.Functions.Function;

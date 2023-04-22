@@ -1,4 +1,4 @@
-package me.willkroboth.NumberArguments.InternalArguments;
+package me.willkroboth.numberarguments.internalarguments;
 
 import dev.jorel.commandapi.CommandAPICommand;
 import dev.jorel.commandapi.arguments.FloatRangeArgument;
